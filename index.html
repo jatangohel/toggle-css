@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <title>Tech Certified HTML Toggle Website</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tech Certified</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Hello, Welcome to my website.</h2>
+        <p>This is a simple website.</p>
+        <button onclick="addCSS()" id="button">Toggle CSS</button>
+
+    </main>
+    <footer>
+        <p>Copyright © Tech Certified</p>
+    </footer>
+    <script>
+        let counter = 0
+        function addCSS() {
+            counter++
+            if (counter % 2 !== 0) {
+                document.getElementById("head").innerHTML = '<title>Tech Certified HTML Toggle Website</title> \n<link rel="stylesheet" href="style.css" />'
+            } else {
+                document.getElementById("head").innerHTML = '  <title>Tech Certified HTML Toggle Website</title> '
+            }
+        }
+    </script>
+</body>
+</html>
